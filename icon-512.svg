@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0C3B2E"/>
+      <stop offset="100%" stop-color="#03110D"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#926F18"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="20" y="20" width="472" height="472" rx="96" fill="none" stroke="url(#gold)" stroke-width="4" opacity="0.7"/>
+  <!-- 8-Point Islamic Star -->
+  <g transform="translate(256,230)" fill="none" stroke="url(#neon)" stroke-width="5" opacity="0.45">
+    <rect x="-110" y="-110" width="220" height="220" rx="12"/>
+    <rect x="-110" y="-110" width="220" height="220" rx="12" transform="rotate(45)"/>
+  </g>
+  <!-- Crescent & Star -->
+  <path d="M285 110 A95 95 0 1 0 365 255 A78 78 0 1 1 285 110 Z" fill="url(#gold)"/>
+  <polygon points="335,145 343,168 367,168 348,182 355,205 335,191 315,205 322,182 303,168 327,168" fill="#34D399"/>
+  <!-- Open Quran Book -->
+  <path d="M116 330 Q186 305 256 335 Q326 305 396 330 L396 405 Q326 380 256 410 Q186 380 116 405 Z" fill="#07261E" stroke="url(#gold)" stroke-width="6"/>
+  <line x1="256" y1="335" x2="256" y2="410" stroke="url(#gold)" stroke-width="5"/>
+</svg>

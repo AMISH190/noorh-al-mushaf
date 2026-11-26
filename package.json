@@ -1,0 +1,20 @@
+{
+  "name": "noor-al-mushaf",
+  "version": "1.0.0",
+  "description": "Noor Al-Mushaf - Quran, Kutub al-Sittah Hadith, Salah, Azan & Qibla App",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:exe": "electron-packager . NoorAlMushaf --platform=win32 --arch=x64 --overwrite --out=dist-windows",
+    "build:apk": "npx cap sync android && cd android && gradlew assembleDebug"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/android": "^6.0.0"
+  }
+}

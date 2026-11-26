@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Noor Al-Mushaf — Quran, Hadith & Salah</title>
+  <!-- PWA & iPhone Add to Home Screen Meta Tags -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#06211A" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Noor Al-Mushaf" />
+  <link rel="apple-touch-icon" href="icon-512.svg" />
+  <link rel="icon" type="image/svg+xml" href="icon-192.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Cinzel:wght@600;700&family=Noto+Sans+Malayalam:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #041511;
+      --bg-card: rgba(10, 38, 31, 0.85);
+      --gold: #D4AF37;
+      --gold-light: #FDE68A;
+      --neon: #10B981;
+      --neon-glow: rgba(16, 185, 129, 0.35);
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border: rgba(212, 175, 55, 0.28);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Malayalam', sans-serif;
+      background: radial-gradient(circle at top right, #0A362A, var(--bg-deep) 65%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 16px 24px;
+      background: rgba(4, 21, 17, 0.92);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      color: var(--gold-light);
+      letter-spacing: 0.5px;
+    }
+    .brand img { width: 38px; height: 38px; border-radius: 10px; }
+    .install-banner {
+      background: linear-gradient(90deg, rgba(16,185,129,0.18), rgba(212,175,55,0.18));
+      border: 1px solid var(--neon);
+      padding: 12px 18px;
+      border-radius: 12px;
+      margin: 16px auto 0;
+      max-width: 960px;
+      width: calc(100% - 32px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn {
+      background: linear-gradient(135deg, var(--neon), #059669);
+      color: #031510;
+      font-weight: 700;
+      border: none;
+      padding: 9px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 15px var(--neon-glow);
+    }
+    main {
+      max-width: 960px;
+      width: 100%;
+      margin: 20px auto;
+      padding: 0 16px 40px;
+      display: grid;
+      gap: 18px;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    h2 { font-family: 'Cinzel', serif; color: var(--gold-light); margin-bottom: 10px; font-size: 1.15rem; }
+    .arabic {
+      font-family: 'Amiri Quran', 'Amiri', serif;
+      font-size: 1.9rem;
+      line-height: 2.3;
+      text-align: right;
+      direction: rtl;
+      color: #FFFBEB;
+      margin: 12px 0;
+    }
+    .malayalam {
+      font-family: 'Noto Sans Malayalam', sans-serif;
+      color: #A7F3D0;
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      background: rgba(212,175,55,0.16);
+      color: var(--gold-light);
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="icon-192.svg" alt="Noor Al-Mushaf Icon" />
+      <span>Noor Al-Mushaf</span>
+    </div>
+    <span class="badge">Android APK • iOS Home Screen • Windows .EXE Ready</span>
+  </header>
+
+  <div class="install-banner" id="installBanner">
+    <div>
+      <strong>Install Noor Al-Mushaf App:</strong> Add to Home Screen on iPhone/Android or Install as Desktop App on Windows.
+    </div>
+    <button class="btn" id="installBtn" onclick="triggerInstall()">Install App</button>
+  </div>
+
+  <main>
+    <div class="card">
+      <h2>Al-Fatihah (1:1-4) — Uthmani Mushaf & Malayalam Default</h2>
+      <div class="arabic">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ۝١ ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ ۝٢ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ۝٣ مَـٰلِكِ يَوْمِ ٱلدِّينِ ۝٤</div>
+      <div class="malayalam">പരമകാരുണികനും കരുണാനിധിയുമായ അല്ലാഹുവിന്റെ നാമത്തിൽ. സർവ്വലോകരക്ഷിതാവായ അല്ലാഹുവിന്ന് സ്തുതി. പരമകാരുണികനും കരുണാനിധിയും. പ്രതിഫല ദിവസത്തിന്റെ ഉടമസ്ഥൻ.</div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h2>Android (.APK)</h2>
+        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.6;">Open in Chrome and tap <b>Install App</b>, or run the included <code>build-android-apk.bat</code> via Capacitor / Bubblewrap to output <code>NoorAlMushaf.apk</code>.</p>
+      </div>
+      <div class="card">
+        <h2>iPhone (iOS Home Screen)</h2>
+        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.6;">Open in <b>Safari</b> → tap the <b>Share (□↑)</b> button → tap <b>Add to Home Screen</b> for full-screen native icon launch.</p>
+      </div>
+      <div class="card">
+        <h2>Windows (.EXE)</h2>
+        <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.6;">Run <code>build-windows-exe.bat</code> (Electron Packager) included in your bundle to compile standalone <code>NoorAlMushaf.exe</code>.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    }
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+    function triggerInstall() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+      } else {
+        alert('To install:\n• iPhone (Safari): Tap Share (□↑) -> Add to Home Screen\n• Android (Chrome): Tap ⋮ Menu -> Install App / Add to Home Screen\n• Windows (Edge/Chrome): Click the Install icon in the address bar or run build-windows-exe.bat');
+      }
+    }
+  </script>
+</body>
+</html>

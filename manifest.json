@@ -1,0 +1,24 @@
+{
+  "name": "Noor Al-Mushaf — Quran, Hadith & Salah",
+  "short_name": "Noor Al-Mushaf",
+  "description": "Complete 114 Surah 3D Page-Turn Mushaf, Kutub al-Sittah Hadith, Azan & Iqamah Alerts, Qibla Finder, Duas, Tasbeeh & Hijri Calendar.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#041511",
+  "theme_color": "#06211A",
+  "icons": [
+    {
+      "src": "icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
